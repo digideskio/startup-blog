@@ -12,6 +12,12 @@ page '/*.txt', layout: false
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
 
+activate :blog do |blog|
+  # set options on blog
+  blog.prefix = "blog"
+  blog.permalink = "blog/{year}/{title}.html"
+end
+
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
 #  which_fake_page: "Rendering a fake page with a local variable" }
